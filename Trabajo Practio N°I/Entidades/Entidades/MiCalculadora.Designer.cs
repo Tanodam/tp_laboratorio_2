@@ -132,7 +132,7 @@
             this.lblResultado.Text = "Resultado";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // MiCalculadora
+            // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,7 +149,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MiCalculadora";
+            this.Name = "FormCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Damián Desario del curso 2°C";
             this.Load += new System.EventHandler(this.MiCalculadora_Load);
