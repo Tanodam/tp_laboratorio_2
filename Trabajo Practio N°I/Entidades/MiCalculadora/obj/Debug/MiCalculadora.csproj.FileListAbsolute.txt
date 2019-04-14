@@ -1,0 +1,10 @@
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\Dami\Desktop\Entidades\MiCalculadora\obj\Debug\MiCalculadora.pdb
