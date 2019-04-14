@@ -9,21 +9,33 @@ namespace Entidades
     class Numero
     {
         private double numero = double.MinValue;
-
+        /// <summary>
+        /// Constructor que asigna el valor de Numero en 0;
+        /// </summary>
         public Numero()
         {
             this.numero = 0;
         }
+        /// <summary>
+        /// Constructor que recibe un numero en formato double y se lo pasa a SetNumero para asingar el valor al atributo numero
+        /// </summary>
+        /// <param name="numero"> Numero recibido en formato double para ser seteado en el atributo numero</param>
         public Numero(double numero)
         {
-            this.numero = numero;
+            SetNumero = Convert.ToString(numero);
         }
-        //Constructor propio, asigna el valor pasado por parametro al valor inicial de numero, conviertiendolo a double antes
+        /// <summary>
+        /// Constructor que recibe un numero en formato string y se lo pasa a SetNumero para asingar el valor al atributo numero
+        /// </summary>
+        /// <param name="numero">Numero recibido en formato string para ser seteado en el atributo numero</param>
         public Numero(string numero)
         {
             SetNumero = numero;
 
         }
+        /// <summary>
+        /// SetNumero setea el value al atributo numero.
+        /// </summary>
         public string SetNumero
         {
             set
@@ -61,7 +73,7 @@ namespace Entidades
         public static string BinarioDecimal(string binario)
         {
             char[] array = binario.ToCharArray();
-            int numero = Convert.ToInt32(binario);
+            double numero = Convert.ToDouble(binario);
             // Invertido pues los valores van incrementandose de derecha a izquierda: 16-8-4-2-1
             Array.Reverse(array);
             string retorno = "";
@@ -72,7 +84,7 @@ namespace Entidades
                 if (array[i] == '1' && numero >= 0)
                 {
                     // Usamos la potencia de 2, según la posición
-                    sum += (int)Math.Pow(2, i);
+                    sum += (double)Math.Pow(2, i);
                     retorno = Convert.ToString(sum);
                 }
                 else if(binario == "0")
@@ -114,7 +126,7 @@ namespace Entidades
         /// <returns>Numero convertido o valor invalido si la conversion falla</returns>
         public static string DecimalBinario(string numero)
         {
-            int num = Convert.ToInt32(numero);
+            Int64 num = Convert.ToInt64(numero);
             if (numero.All(Char.IsNumber) && num >= 0)
             {
                 return Convert.ToString(num, 2);

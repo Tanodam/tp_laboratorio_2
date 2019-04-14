@@ -125,9 +125,9 @@
             // 
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblResultado.Location = new System.Drawing.Point(165, 9);
+            this.lblResultado.Location = new System.Drawing.Point(12, 9);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(214, 39);
+            this.lblResultado.Size = new System.Drawing.Size(367, 39);
             this.lblResultado.TabIndex = 7;
             this.lblResultado.Text = "Resultado";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

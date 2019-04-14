@@ -42,9 +42,8 @@ namespace Entidades
             {
                 resultado = FormCalculadora.Operar(txtNumeroUno.Text, txtNumeroDos.Text, cbOperador.Text);
                 lblResultado.Text = Convert.ToString(resultado);
-                //Luego de obtener el resultado se habilitan los botones Convertir de Decimal a Binario y Convertir de binario a Decimal
+                //Luego de obtener el resultado se habilitan el boton Convertir de Decimal a Binario
                 btnConvertirABinario.Enabled = true;
-                btnConvertirADecimal.Enabled = true;
             }
         }
         /// <summary>
@@ -100,30 +99,40 @@ namespace Entidades
             this.Close();
         }
         /// <summary>
-        /// 
+        /// El metodo click del btnConvertiraBinario se encaga de tomar el valor de lblResultado.Text y lo convierte a binario.
+        /// De ser un valor invalido, se mostrara en pantalla el error y ademas se inhabilitan los botones convertir a binario y
+        /// convertir a decimal. Si el valor es valido entonces se lo muestra en pantalla y ademas se habilita el boton converir 
+        /// a Decimal.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            string lblBackup = lblResultado.Text;
             this.lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
-            if(!lblResultado.Text.All(Char.IsNumber))
+            btnConvertirADecimal.Enabled = true;
+            //Si el valor en biniario es demasiado grande, se mostrara en un MessageBox
+            if (lblResultado.Text.Length > 21)
+            {
+                MessageBox.Show(lblResultado.Text,"Resultado binario");
+
+            }
+            //Si el contenido de lblresultado despues de convetir a binario no es numerico entonces quedaran inhabilitadas las opciones de convertir a binario
+            //y convertir a decimal.
+            else if (!lblResultado.Text.All(Char.IsNumber))
             {
                 btnConvertirABinario.Enabled = false;
                 btnConvertirADecimal.Enabled = false;
             }
         }
-
+        /// <summary>
+        /// Si el metodo convertir a binario fue exitoso entonces estara habilitado para poder convertir de binario a decimal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string lblBackup = lblResultado.Text;
             this.lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
-            if(!lblResultado.Text.All(Char.IsNumber))
-            {
-                lblResultado.Text = lblBackup;
-            }
-        
         }
 
     }
