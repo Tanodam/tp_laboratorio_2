@@ -27,7 +27,7 @@ namespace TP_02_2018
             Snacks a3 = new Snacks(EMarca.Sancor, "IOP852", ConsoleColor.Green);
             Snacks a4 = new Snacks(EMarca.Sancor, "TRE321", ConsoleColor.Green);
 
-            // Agrego 8 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
+            // Agrego 9 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
             changoDeCompras += c1;
             changoDeCompras += c2;
             changoDeCompras += m1;
@@ -51,19 +51,19 @@ namespace TP_02_2018
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Muestro solo Dulces");
+            //Muestro solo Dulces
             Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Dulce));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Muestro solo Leches");
+            //Muestro solo Leches"
             Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Leche));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Muestro solo Snacks");
+            //Muestro solo Snacks
             Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Snacks));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();

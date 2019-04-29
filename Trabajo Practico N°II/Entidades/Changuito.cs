@@ -57,48 +57,36 @@ namespace Entidades_2018
             StringBuilder sb = new StringBuilder();
             int i = (int)tipo;
 
-            Console.WriteLine("-----------------------------------TIPO" + i);
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
             sb.AppendLine("");
             foreach (Producto v in c.productos)
             {
-                if(v is Dulce)
+                switch (tipo)
                 {
-                    Dulce dulce = (Dulce)(v);
-                    sb.AppendLine(dulce.Mostrar());
-                    
+                    case ETipo.Snacks:
+                        if (v is Snacks)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
+                        break;
+
+                    case ETipo.Dulce:
+                        if (v is Dulce)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
+                        break;
+
+                    case ETipo.Leche:
+                        if (v is Leche)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
+                        break;
+                    default:
+                        sb.AppendLine(v.Mostrar());
+                        break;
                 }
-                else if(v is Snacks)
-                {
-                    Snacks snacks = (Snacks)(v);
-                    sb.AppendLine(snacks.Mostrar());
-                    
-                }
-                else if(v is Leche)
-                {
-                    Leche leche = (Leche)(v);
-                    sb.AppendLine(leche.Mostrar());
-                    
-                }
-                //switch (i)
-                //{
-                //    case 0:
-                //        sb.AppendLine(dulce.Mostrar());
-                //        Console.WriteLine("entre aca dulce");
-                //        break;
-                //    case 2:
-                //        sb.AppendLine(v.Mostrar());
-                //        Console.WriteLine("entre aca snacks");
-                //        break;
-                //    case 1:
-                //        sb.AppendLine(v.Mostrar());
-                //        Console.WriteLine("entre aca chele");
-                //        break;
-                //    default:
-                //        sb.AppendLine(v.Mostrar());
-                //        Console.WriteLine("entre aca todos");
-                //        break;
-                //}
             }
 
             return sb.ToString();
@@ -114,13 +102,11 @@ namespace Entidades_2018
         /// <returns></returns>
         public static Changuito operator +(Changuito c, Producto p)
         {
-            foreach (Producto v in c.productos)
+            if (c.espacioDisponible > c.productos.Count && !c.productos.Contains(p))
             {
-                if (v == p)
-                    return c;
+                c.productos.Add(p);
             }
 
-            c.productos.Add(p);
             return c;
         }
         /// <summary>

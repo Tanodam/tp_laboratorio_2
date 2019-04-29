@@ -28,3 +28,13 @@ C:\Users\Dami\Downloads\TP-02-Cascara\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCom
 C:\Users\Dami\Downloads\TP-02-Cascara\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
 C:\Users\Dami\Downloads\TP-02-Cascara\TP-02\TP-02\obj\Debug\TP-02.exe
 C:\Users\Dami\Downloads\TP-02-Cascara\TP-02\TP-02\obj\Debug\TP-02.pdb
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\bin\Debug\TP-02.exe
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\bin\Debug\TP-02.pdb
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\bin\Debug\Entidades.dll
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\bin\Debug\Entidades.pdb
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\obj\Debug\TP-02.exe
+C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\TP-02\obj\Debug\TP-02.pdb
