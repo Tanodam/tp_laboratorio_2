@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace Entidades_2018
 {
-    public enum EMarca
-    {
-        Serenisima, Campagnola, Arcor, Ilolay, Sancor, Pepsico
-    }
     /// <summary>
     /// La clase Producto no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
     abstract public class Producto
     {
+        public enum EMarca
+        {
+            Serenisima, Campagnola, Arcor, Ilolay, Sancor, Pepsico
+        }
         private EMarca marca;
         private string codigoDeBarras;
         private ConsoleColor colorPrimarioEmpaque;
+
+        /// <summary>
+        /// ReadOnly: Retornará la cantidad de ruedas del vehículo
+        /// </summary>
+        protected short CantidadCalorias { get; }
 
         public Producto(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque)
         {
@@ -34,7 +39,10 @@ namespace Entidades_2018
         {
             return (string)this;
         }
-
+        /// <summary>
+        /// Arma un string builder con todos los datos del producto, es utilizado por Mostrar()
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Producto p)
         {
             StringBuilder sb = new StringBuilder();

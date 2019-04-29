@@ -8,25 +8,31 @@ using System.Drawing;
 
 namespace Entidades_2018
 {
-    public enum ETipo
-    {
-        Entera,
-        Descremada
-    };
     public class Leche : Producto
     {
-        ETipo tipo;
+        public enum ETipo
+        {
+            Entera,
+            Descremada
+        };
+        private ETipo tipo;
 
         /// <summary>
-        /// Por defecto, TIPO será ENTERA
+        ///  Por defecto, TIPO será ENTERA
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="patente"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Marca del producto</param>
+        /// <param name="codigoDeBarras">Codigo de barras del producto</param>
+        /// <param name="colorPrimarioEmpaque">Color del empaque del producto</param>
         public Leche(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
         {
             this.tipo = ETipo.Entera;
         }
+        /// <summary>
+        /// Permite asignar un valor distinto a TIPO
+        /// </summary>
+        /// <param name="marca">Marca del producto</param>
+        /// <param name="codigoDeBarras">Codigo de barras del producto</param>
+        /// <param name="colorPrimarioEmpaque">Color del empaque del producto</param>
         public Leche(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque, ETipo tipo) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
         {
             this.tipo = tipo;
@@ -34,14 +40,18 @@ namespace Entidades_2018
         /// <summary>
         /// Las leches tienen 20 calorías
         /// </summary>
-        protected short CantidadCalorias
+        new protected short CantidadCalorias
         {
             get
             {
                 return 20;
             }
         }
-
+        /// <summary>
+        /// Modificacion del metodo Mostrar de la clase base, agrega la info de calorias mediante el getter de CantidadCalorias
+        /// y el TIPO de leche.
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

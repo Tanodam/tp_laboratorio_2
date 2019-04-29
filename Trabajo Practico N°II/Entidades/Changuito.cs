@@ -18,14 +18,21 @@ namespace Entidades_2018
             Snacks,
             Todos
         };
-        List<Producto> productos;
-        int espacioDisponible;
+        private List<Producto> productos;
+        private int espacioDisponible;
 
         #region "Constructores"
+        /// <summary>
+        /// Constructor privado que instancia la lista de articulos
+        /// </summary>
         private Changuito()
         {
             this.productos = new List<Producto>();
         }
+        /// <summary>
+        /// Constructor que asigna el espacio disponible y instancia la lista mediante la llamada al constructor privado
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Changuito(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -63,32 +70,29 @@ namespace Entidades_2018
             {
                 switch (tipo)
                 {
-                    case ETipo.Snacks:
-                        if (v is Snacks)
-                        {
-                            sb.AppendLine(v.Mostrar());
-                        }
-                        break;
-
-                    case ETipo.Dulce:
-                        if (v is Dulce)
-                        {
-                            sb.AppendLine(v.Mostrar());
-                        }
-                        break;
-
                     case ETipo.Leche:
                         if (v is Leche)
                         {
                             sb.AppendLine(v.Mostrar());
                         }
                         break;
-                    default:
+                    case ETipo.Snacks:
+                        if (v is Snacks)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
+                        break;
+                    case ETipo.Dulce:
+                        if (v is Dulce)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
+                        break;
+                    default: //ETipo.Todos
                         sb.AppendLine(v.Mostrar());
                         break;
                 }
             }
-
             return sb.ToString();
         }
         #endregion

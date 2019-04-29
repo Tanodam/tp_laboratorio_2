@@ -23,3 +23,9 @@ C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.dll
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\bin\Debug\Entidades.dll
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\bin\Debug\Entidades.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.dll
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practico N°II\Entidades\obj\Debug\Entidades.pdb

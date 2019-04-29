@@ -18,16 +18,16 @@ namespace TP_02_2018
 
             Changuito changoDeCompras = new Changuito(6);
 
-            Dulce c1 = new Dulce(EMarca.Sancor, "ASD012", ConsoleColor.Black);
-            Dulce c2 = new Dulce(EMarca.Ilolay, "ASD913", ConsoleColor.Red);
-            Leche m1 = new Leche(EMarca.Pepsico, "HJK789", ConsoleColor.White);
-            Leche m2 = new Leche(EMarca.Serenisima, "IOP852", ConsoleColor.Blue, ETipo.Descremada);
-            Snacks a1 = new Snacks(EMarca.Campagnola, "QWE968", ConsoleColor.Gray);
-            Snacks a2 = new Snacks(EMarca.Arcor, "TYU426", ConsoleColor.DarkBlue);
-            Snacks a3 = new Snacks(EMarca.Sancor, "IOP852", ConsoleColor.Green);
-            Snacks a4 = new Snacks(EMarca.Sancor, "TRE321", ConsoleColor.Green);
+            Dulce c1 = new Dulce(Producto.EMarca.Sancor, "ASD012", ConsoleColor.Black);
+            Dulce c2 = new Dulce(Producto.EMarca.Ilolay, "ASD913", ConsoleColor.Red);
+            Leche m1 = new Leche(Producto.EMarca.Pepsico, "HJK789", ConsoleColor.White);
+            Leche m2 = new Leche(Producto.EMarca.Serenisima, "IOP852", ConsoleColor.Blue, Leche.ETipo.Descremada);
+            Snacks a1 = new Snacks(Producto.EMarca.Campagnola, "QWE968", ConsoleColor.Gray);
+            Snacks a2 = new Snacks(Producto.EMarca.Arcor, "TYU426", ConsoleColor.DarkBlue);
+            Snacks a3 = new Snacks(Producto.EMarca.Sancor, "IOP852", ConsoleColor.Green);
+            Snacks a4 = new Snacks(Producto.EMarca.Sancor, "TRE321", ConsoleColor.Green);
 
-            // Agrego 9 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
+            //Agrego 9 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
             changoDeCompras += c1;
             changoDeCompras += c2;
             changoDeCompras += m1;
