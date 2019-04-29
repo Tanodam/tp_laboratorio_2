@@ -128,7 +128,9 @@ namespace Entidades
             }
             catch (System.OverflowException) //Atrapo el caso de un overflow de la variable num.
             {
-
+            }
+            catch (System.FormatException)
+            {
             }
            return "Valor invalido";
 

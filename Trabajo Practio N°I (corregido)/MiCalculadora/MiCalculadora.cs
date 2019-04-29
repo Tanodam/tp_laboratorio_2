@@ -132,9 +132,7 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void ButtonConvertirADecimal_Click(object sender, EventArgs e)
         {
-            string lblBackup = LabelResultado.Text;
             this.LabelResultado.Text = Numero.BinarioDecimal(LabelResultado.Text);
         }
-
     }
 }

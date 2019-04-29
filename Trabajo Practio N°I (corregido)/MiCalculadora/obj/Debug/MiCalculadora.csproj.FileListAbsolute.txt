@@ -23,3 +23,16 @@ C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCal
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\MiCalculadora\obj\Debug\MiCalculadora.pdb

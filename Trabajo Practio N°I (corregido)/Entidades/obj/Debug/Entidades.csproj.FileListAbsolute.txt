@@ -10,3 +10,9 @@ C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\Entidades\obj\Debug\Entidades
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\Entidades\obj\Debug\Entidades.dll
 C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\TP1\Entidades\obj\Debug\Entidades.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\bin\Debug\Entidades.dll
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\bin\Debug\Entidades.pdb
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\obj\Debug\Entidades.dll
+C:\Users\soporte3\Desktop\UTN\tp_laboratorio_2\Trabajo Practio N°I (corregido)\Entidades\obj\Debug\Entidades.pdb

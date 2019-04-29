@@ -41,39 +41,39 @@
             // 
             // TextBoxNumeroUno
             // 
-            this.TextBoxNumeroUno.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxNumeroUno.Location = new System.Drawing.Point(12, 63);
+            this.TextBoxNumeroUno.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxNumeroUno.Location = new System.Drawing.Point(7, 53);
             this.TextBoxNumeroUno.Name = "TextBoxNumeroUno";
-            this.TextBoxNumeroUno.Size = new System.Drawing.Size(100, 40);
+            this.TextBoxNumeroUno.Size = new System.Drawing.Size(100, 38);
             this.TextBoxNumeroUno.TabIndex = 0;
             this.TextBoxNumeroUno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBoxNumeroDos
             // 
-            this.TextBoxNumeroDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxNumeroDos.Location = new System.Drawing.Point(277, 63);
+            this.TextBoxNumeroDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxNumeroDos.Location = new System.Drawing.Point(272, 53);
             this.TextBoxNumeroDos.Name = "TextBoxNumeroDos";
-            this.TextBoxNumeroDos.Size = new System.Drawing.Size(100, 40);
+            this.TextBoxNumeroDos.Size = new System.Drawing.Size(100, 38);
             this.TextBoxNumeroDos.TabIndex = 2;
             this.TextBoxNumeroDos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ComboBoxOperador
             // 
-            this.ComboBoxOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxOperador.FormattingEnabled = true;
             this.ComboBoxOperador.Items.AddRange(new object[] {
             "/",
             "*",
             "-",
             "+"});
-            this.ComboBoxOperador.Location = new System.Drawing.Point(144, 62);
+            this.ComboBoxOperador.Location = new System.Drawing.Point(139, 52);
             this.ComboBoxOperador.Name = "ComboBoxOperador";
-            this.ComboBoxOperador.Size = new System.Drawing.Size(100, 41);
+            this.ComboBoxOperador.Size = new System.Drawing.Size(100, 39);
             this.ComboBoxOperador.TabIndex = 1;
             // 
             // ButtonOperar
             // 
-            this.ButtonOperar.Location = new System.Drawing.Point(12, 134);
+            this.ButtonOperar.Location = new System.Drawing.Point(7, 110);
             this.ButtonOperar.Name = "ButtonOperar";
             this.ButtonOperar.Size = new System.Drawing.Size(100, 39);
             this.ButtonOperar.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // ButtonLimpiar
             // 
-            this.ButtonLimpiar.Location = new System.Drawing.Point(144, 134);
+            this.ButtonLimpiar.Location = new System.Drawing.Point(139, 110);
             this.ButtonLimpiar.Name = "ButtonLimpiar";
             this.ButtonLimpiar.Size = new System.Drawing.Size(100, 39);
             this.ButtonLimpiar.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             // ButtonCerrar
             // 
-            this.ButtonCerrar.Location = new System.Drawing.Point(278, 134);
+            this.ButtonCerrar.Location = new System.Drawing.Point(273, 110);
             this.ButtonCerrar.Name = "ButtonCerrar";
             this.ButtonCerrar.Size = new System.Drawing.Size(100, 39);
             this.ButtonCerrar.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             // ButtonConvertirABinario
             // 
-            this.ButtonConvertirABinario.Location = new System.Drawing.Point(12, 179);
+            this.ButtonConvertirABinario.Location = new System.Drawing.Point(7, 155);
             this.ButtonConvertirABinario.Name = "ButtonConvertirABinario";
             this.ButtonConvertirABinario.Size = new System.Drawing.Size(183, 39);
             this.ButtonConvertirABinario.TabIndex = 6;
@@ -113,7 +113,7 @@
             // 
             // ButttonConvertirADecimal
             // 
-            this.ButttonConvertirADecimal.Location = new System.Drawing.Point(201, 179);
+            this.ButttonConvertirADecimal.Location = new System.Drawing.Point(196, 155);
             this.ButttonConvertirADecimal.Name = "ButttonConvertirADecimal";
             this.ButttonConvertirADecimal.Size = new System.Drawing.Size(176, 39);
             this.ButttonConvertirADecimal.TabIndex = 0;
@@ -123,7 +123,7 @@
             // 
             // LabelResultado
             // 
-            this.LabelResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelResultado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.LabelResultado.Location = new System.Drawing.Point(12, 9);
             this.LabelResultado.Name = "LabelResultado";
@@ -136,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 234);
+            this.ClientSize = new System.Drawing.Size(381, 202);
             this.Controls.Add(this.LabelResultado);
             this.Controls.Add(this.ButttonConvertirADecimal);
             this.Controls.Add(this.ButtonConvertirABinario);
