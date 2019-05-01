@@ -43,13 +43,13 @@ namespace Entidades_2018
         /// Arma un string builder con todos los datos del producto, es utilizado por Mostrar()
         /// </summary>
         /// <param name="p"></param>
-        public static explicit operator string(Producto p)
+        public static explicit operator string(Producto producto)
         {
             StringBuilder datosProducto = new StringBuilder();
 
-            datosProducto.AppendFormat("CODIGO DE BARRAS: {0}\r\n", p.codigoDeBarras);
-            datosProducto.AppendFormat("MARCA          : {0}\r\n", p.marca.ToString());
-            datosProducto.AppendFormat("COLOR EMPAQUE  : {0}\r\n", p.colorPrimarioEmpaque.ToString());
+            datosProducto.AppendFormat("CODIGO DE BARRAS: {0}\r\n", producto.codigoDeBarras);
+            datosProducto.AppendFormat("MARCA          : {0}\r\n", producto.marca.ToString());
+            datosProducto.AppendFormat("COLOR EMPAQUE  : {0}\r\n", producto.colorPrimarioEmpaque.ToString());
             datosProducto.AppendFormat("---------------------");
 
             return datosProducto.ToString();

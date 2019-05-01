@@ -11,7 +11,7 @@ namespace Entidades_2018
     /// </summary>
     public sealed class Changuito
     {
-        public enum TipoDeLeche
+        public enum TipoDeProducto
         {
             Dulce,
             Leche,
@@ -46,7 +46,7 @@ namespace Entidades_2018
         /// <returns></returns>
         public override string ToString()
         {
-            return Changuito.Mostrar(this, TipoDeLeche.Todos);
+            return Changuito.Mostrar(this, TipoDeProducto.Todos);
         }
         #endregion
 
@@ -56,40 +56,39 @@ namespace Entidades_2018
         /// Expone los datos del elemento y su lista (incluidas sus herencias)
         /// SOLO del tipo requerido
         /// </summary>
-        /// <param name="c">Elemento a exponer</param>
+        /// <param name="changuito">Elemento a exponer</param>
         /// <param name="TipoDeLeche">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public static string Mostrar(Changuito c, Changuito.TipoDeLeche tipo)
+        public static string Mostrar(Changuito changuito, Changuito.TipoDeProducto tipo)
         {
             StringBuilder datosProducto = new StringBuilder();
-            int i = (int)tipo;
 
-            datosProducto.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
+            datosProducto.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", changuito.productos.Count, changuito.espacioDisponible);
             datosProducto.AppendLine("");
-            foreach (Producto v in c.productos)
+            foreach (Producto productoAux in changuito.productos)
             {
                 switch (tipo)
                 {
-                    case TipoDeLeche.Leche:
-                        if (v is Leche)
+                    case TipoDeProducto.Leche:
+                        if (productoAux is Leche)
                         {
-                            datosProducto.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(productoAux.Mostrar());
                         }
                         break;
-                    case TipoDeLeche.Snacks:
-                        if (v is Snacks)
+                    case TipoDeProducto.Snacks:
+                        if (productoAux is Snacks)
                         {
-                            datosProducto.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(productoAux.Mostrar());
                         }
                         break;
-                    case TipoDeLeche.Dulce:
-                        if (v is Dulce)
+                    case TipoDeProducto.Dulce:
+                        if (productoAux is Dulce)
                         {
-                            datosProducto.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(productoAux.Mostrar());
                         }
                         break;
                     default: //TipoDeLeche.Todos
-                        datosProducto.AppendLine(v.Mostrar());
+                        datosProducto.AppendLine(productoAux.Mostrar());
                         break;
                 }
             }
@@ -101,36 +100,36 @@ namespace Entidades_2018
         /// <summary>
         /// Agregará un elemento a la lista
         /// </summary>
-        /// <param name="c">Objeto donde se agregará el elemento</param>
-        /// <param name="p">Objeto a agregar</param>
+        /// <param name="changuito">Objeto donde se agregará el elemento</param>
+        /// <param name="producto">Objeto a agregar</param>
         /// <returns></returns>
-        public static Changuito operator +(Changuito c, Producto p)
+        public static Changuito operator +(Changuito changuito, Producto producto)
         {
-            if (c.espacioDisponible > c.productos.Count && !c.productos.Contains(p))
+            if (changuito.espacioDisponible > changuito.productos.Count && !changuito.productos.Contains(producto))
             {
-                c.productos.Add(p);
+                changuito.productos.Add(producto);
             }
 
-            return c;
+            return changuito;
         }
         /// <summary>
         /// Quitará un elemento de la lista
         /// </summary>
-        /// <param name="c">Objeto donde se quitará el elemento</param>
-        /// <param name="p">Objeto a quitar</param>
+        /// <param name="changuito">Objeto donde se quitará el elemento</param>
+        /// <param name="producto">Objeto a quitar</param>
         /// <returns></returns>
-        public static Changuito operator -(Changuito c, Producto p)
+        public static Changuito operator -(Changuito changuito, Producto producto)
         {
-            foreach (Producto v in c.productos)
+            foreach (Producto productoAux in changuito.productos)
             {
-                if (v == p)
+                if (productoAux == producto)
                 {
-                    c.productos.Remove(v);
+                    changuito.productos.Remove(producto);
                     break;
                 }
             }
 
-            return c;
+            return changuito;
         }
         #endregion
     }

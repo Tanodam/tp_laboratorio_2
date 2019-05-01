@@ -52,19 +52,19 @@ namespace TP_02_2018
             Console.Clear();
 
             //Muestro solo Dulces
-            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Dulce));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeProducto.Dulce));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             //Muestro solo Leches"
-            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Leche));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeProducto.Leche));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             //Muestro solo Snacks
-            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Snacks));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeProducto.Snacks));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }
