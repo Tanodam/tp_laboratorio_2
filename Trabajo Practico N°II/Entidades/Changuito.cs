@@ -11,7 +11,7 @@ namespace Entidades_2018
     /// </summary>
     public sealed class Changuito
     {
-        public enum ETipo
+        public enum TipoDeLeche
         {
             Dulce,
             Leche,
@@ -46,7 +46,7 @@ namespace Entidades_2018
         /// <returns></returns>
         public override string ToString()
         {
-            return this.Mostrar(this, ETipo.Todos);
+            return Changuito.Mostrar(this, TipoDeLeche.Todos);
         }
         #endregion
 
@@ -57,43 +57,43 @@ namespace Entidades_2018
         /// SOLO del tipo requerido
         /// </summary>
         /// <param name="c">Elemento a exponer</param>
-        /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
+        /// <param name="TipoDeLeche">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public string Mostrar(Changuito c, Changuito.ETipo tipo)
+        public static string Mostrar(Changuito c, Changuito.TipoDeLeche tipo)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder datosProducto = new StringBuilder();
             int i = (int)tipo;
 
-            sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
-            sb.AppendLine("");
+            datosProducto.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
+            datosProducto.AppendLine("");
             foreach (Producto v in c.productos)
             {
                 switch (tipo)
                 {
-                    case ETipo.Leche:
+                    case TipoDeLeche.Leche:
                         if (v is Leche)
                         {
-                            sb.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(v.Mostrar());
                         }
                         break;
-                    case ETipo.Snacks:
+                    case TipoDeLeche.Snacks:
                         if (v is Snacks)
                         {
-                            sb.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(v.Mostrar());
                         }
                         break;
-                    case ETipo.Dulce:
+                    case TipoDeLeche.Dulce:
                         if (v is Dulce)
                         {
-                            sb.AppendLine(v.Mostrar());
+                            datosProducto.AppendLine(v.Mostrar());
                         }
                         break;
-                    default: //ETipo.Todos
-                        sb.AppendLine(v.Mostrar());
+                    default: //TipoDeLeche.Todos
+                        datosProducto.AppendLine(v.Mostrar());
                         break;
                 }
             }
-            return sb.ToString();
+            return datosProducto.ToString();
         }
         #endregion
 

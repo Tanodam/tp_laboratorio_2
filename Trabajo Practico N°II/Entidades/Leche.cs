@@ -10,12 +10,11 @@ namespace Entidades_2018
 {
     public class Leche : Producto
     {
-        public enum ETipo
+        public enum TipoDeLeche
         {
-            Entera,
-            Descremada
+            Entera, Descremada
         };
-        private ETipo tipo;
+        private TipoDeLeche tipo;
 
         /// <summary>
         ///  Por defecto, TIPO será ENTERA
@@ -23,9 +22,9 @@ namespace Entidades_2018
         /// <param name="marca">Marca del producto</param>
         /// <param name="codigoDeBarras">Codigo de barras del producto</param>
         /// <param name="colorPrimarioEmpaque">Color del empaque del producto</param>
-        public Leche(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
+        public Leche(MarcaDelProducto marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
         {
-            this.tipo = ETipo.Entera;
+            this.tipo = TipoDeLeche.Entera;
         }
         /// <summary>
         /// Permite asignar un valor distinto a TIPO
@@ -33,14 +32,14 @@ namespace Entidades_2018
         /// <param name="marca">Marca del producto</param>
         /// <param name="codigoDeBarras">Codigo de barras del producto</param>
         /// <param name="colorPrimarioEmpaque">Color del empaque del producto</param>
-        public Leche(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque, ETipo tipo) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
+        public Leche(MarcaDelProducto marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque, TipoDeLeche tipo) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
         {
             this.tipo = tipo;
         }
         /// <summary>
         /// Las leches tienen 20 calorías
         /// </summary>
-        new protected short CantidadCalorias
+        protected override short CantidadCalorias
         {
             get
             {
@@ -54,16 +53,16 @@ namespace Entidades_2018
         /// <returns></returns>
         public override sealed string Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder datosProducto = new StringBuilder();
 
-            sb.AppendLine("LECHE");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendLine("\nCALORIAS: " + this.CantidadCalorias);
-            sb.AppendLine("TIPO : " + this.tipo);
-            sb.AppendLine("");
-            sb.AppendLine("---------------------");
+            datosProducto.AppendLine("LECHE");
+            datosProducto.AppendLine(base.Mostrar());
+            datosProducto.AppendLine("\nCALORIAS: " + this.CantidadCalorias);
+            datosProducto.AppendLine("TIPO : " + this.tipo);
+            datosProducto.AppendLine("");
+            datosProducto.AppendLine("---------------------");
 
-            return sb.ToString();
+            return datosProducto.ToString();
         }
     }
 }

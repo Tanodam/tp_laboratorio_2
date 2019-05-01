@@ -18,14 +18,14 @@ namespace TP_02_2018
 
             Changuito changoDeCompras = new Changuito(6);
 
-            Dulce c1 = new Dulce(Producto.EMarca.Sancor, "ASD012", ConsoleColor.Black);
-            Dulce c2 = new Dulce(Producto.EMarca.Ilolay, "ASD913", ConsoleColor.Red);
-            Leche m1 = new Leche(Producto.EMarca.Pepsico, "HJK789", ConsoleColor.White);
-            Leche m2 = new Leche(Producto.EMarca.Serenisima, "IOP852", ConsoleColor.Blue, Leche.ETipo.Descremada);
-            Snacks a1 = new Snacks(Producto.EMarca.Campagnola, "QWE968", ConsoleColor.Gray);
-            Snacks a2 = new Snacks(Producto.EMarca.Arcor, "TYU426", ConsoleColor.DarkBlue);
-            Snacks a3 = new Snacks(Producto.EMarca.Sancor, "IOP852", ConsoleColor.Green);
-            Snacks a4 = new Snacks(Producto.EMarca.Sancor, "TRE321", ConsoleColor.Green);
+            Dulce c1 = new Dulce(Producto.MarcaDelProducto.Sancor, "ASD012", ConsoleColor.Black);
+            Dulce c2 = new Dulce(Producto.MarcaDelProducto.Ilolay, "ASD913", ConsoleColor.Red);
+            Leche m1 = new Leche(Producto.MarcaDelProducto.Pepsico, "HJK789", ConsoleColor.White);
+            Leche m2 = new Leche(Producto.MarcaDelProducto.Serenisima, "IOP852", ConsoleColor.Blue, Leche.TipoDeLeche.Descremada);
+            Snacks a1 = new Snacks(Producto.MarcaDelProducto.Campagnola, "QWE968", ConsoleColor.Gray);
+            Snacks a2 = new Snacks(Producto.MarcaDelProducto.Arcor, "TYU426", ConsoleColor.DarkBlue);
+            Snacks a3 = new Snacks(Producto.MarcaDelProducto.Sancor, "IOP852", ConsoleColor.Green);
+            Snacks a4 = new Snacks(Producto.MarcaDelProducto.Sancor, "TRE321", ConsoleColor.Green);
 
             //Agrego 9 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
             changoDeCompras += c1;
@@ -52,19 +52,19 @@ namespace TP_02_2018
             Console.Clear();
 
             //Muestro solo Dulces
-            Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Dulce));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Dulce));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             //Muestro solo Leches"
-            Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Leche));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Leche));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             //Muestro solo Snacks
-            Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Snacks));
+            Console.WriteLine(Changuito.Mostrar(changoDeCompras, Changuito.TipoDeLeche.Snacks));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }

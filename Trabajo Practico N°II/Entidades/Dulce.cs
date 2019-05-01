@@ -14,13 +14,13 @@ namespace Entidades_2018
         /// <param name="marca">Marca del producto</param>
         /// <param name="codigoDeBarras">Codigo de barras del producto</param>
         /// <param name="colorPrimarioEmpaque">Color del empaque del producto</param>
-        public Dulce(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
+        public Dulce(MarcaDelProducto marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque) : base(marca, codigoDeBarras, colorPrimarioEmpaque)
         {
         }
         /// <summary>
         /// Los dulces tienen 80 calorías
         /// </summary>
-        new protected short CantidadCalorias
+        protected override short CantidadCalorias
         {
             get
             {
@@ -33,15 +33,15 @@ namespace Entidades_2018
         /// <returns></returns>
         public override sealed string Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder datosProducto = new StringBuilder();
 
-            sb.AppendLine("DULCE");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendLine("\nCALORIAS: " + this.CantidadCalorias);
-            sb.AppendLine("");
-            sb.AppendLine("---------------------");
+            datosProducto.AppendLine("DULCE");
+            datosProducto.AppendLine(base.Mostrar());
+            datosProducto.AppendLine("\nCALORIAS: " + this.CantidadCalorias);
+            datosProducto.AppendLine("");
+            datosProducto.AppendLine("---------------------");
 
-            return sb.ToString();
+            return datosProducto.ToString();
         }
     }
 }
