@@ -16,7 +16,6 @@ namespace MiCalculadora
         public FormCalculadora()
         {
             InitializeComponent();
-
         }
         /// <summary>
         /// Metodo load que inhabilita los botones convertir a binario y convertir a decimal porque si no hay un
@@ -26,8 +25,8 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void MiCalculadora_Load(object sender, EventArgs e)
         {
-            ButtonConvertirABinario.Enabled = false;
-            ButttonConvertirADecimal.Enabled = false;
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
 
         }
         /// <summary>
@@ -39,17 +38,21 @@ namespace MiCalculadora
         private void ButtonOperar_Click(object sender, EventArgs e)
         {
             double resultado = 0;
-            if (TextBoxNumeroUno.Text != "" && TextBoxNumeroDos.Text != "")
+            if (txtBoxNumeroUno.Text != "" && txtBoxNumeroDos.Text != "")
             {
-                resultado = FormCalculadora.Operar(TextBoxNumeroUno.Text, TextBoxNumeroDos.Text, ComboBoxOperador.Text);
-                LabelResultado.Text = Convert.ToString(resultado);
-                //Luego de obtener el resultado se habilitan el boton Convertir de Decimal a Binario
-                ButtonConvertirABinario.Enabled = true;
+                resultado = FormCalculadora.Operar(txtBoxNumeroUno.Text, txtBoxNumeroDos.Text, comboBoxOperador.Text);
+                lblResultado.Text = Convert.ToString(resultado);
+                //Luego de obtener el resultado se habilitan el boton Convertir a Binario
+                if(lblResultado.Text.Length < 19)
+                {
+                     btnConvertirABinario.Enabled = true;
+                }
             }
         }
         /// <summary>
         /// Metodo Operar, recibe los numeros desde los textbox, hace el new correspondiente a cada numero y 
-        /// llama Calculadora.Operar() para realizar el calculo y luego devolver el resultado en formato double
+        /// llama Calculadora.Operar() para realizar el calculo y luego convierte el resultado en un string par
+        /// mostrarlo en el lblResultado
         /// </summary>
         /// <param name="numeroUno">Numero Uno leido desde txtNumeroUno.Text</param>
         /// <param name="numeroDos">Numero Dos leido desde txtNumeroDos.Text</param>
@@ -57,9 +60,7 @@ namespace MiCalculadora
         /// <returns>(double)Resultado<</returns>
         private static double Operar(string numeroUno, string numeroDos, string operador)
         {
-            Numero numero1 = new Numero(numeroUno);
-            Numero numero2 = new Numero(numeroDos);
-            string resultado = Calculadora.Operar(numero1, numero2, operador);
+            string resultado = Calculadora.Operar(new Numero(numeroUno), new Numero(numeroDos), operador);
             double resultadoDouble = double.MinValue;
             double retorno = double.MinValue;
             if (double.TryParse(resultado, out resultadoDouble))
@@ -83,12 +84,12 @@ namespace MiCalculadora
         /// </summary>
         private void Limpiar()
         {
-            TextBoxNumeroUno.Text = "";
-            TextBoxNumeroDos.Text = "";
-            ComboBoxOperador.Text = "";
-            LabelResultado.Text = "Resultado";
-            ButtonConvertirABinario.Enabled = false;
-            ButttonConvertirADecimal.Enabled = false;
+            txtBoxNumeroUno.Text = "";
+            txtBoxNumeroDos.Text = "";
+            comboBoxOperador.Text = "";
+            lblResultado.Text = "Resultado";
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
         }
         /// <summary>
         /// El metodo click de btnCerrar, llama al metodo .Close de Form para cerrar el formulario
@@ -109,30 +110,37 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void ButtonConvertirABinario_Click(object sender, EventArgs e)
         {
-            this.LabelResultado.Text = Numero.DecimalBinario(LabelResultado.Text);
-            ButttonConvertirADecimal.Enabled = true;
+            this.lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
+            btnConvertirADecimal.Enabled = true;
+            //Se desactiva el boton convertir a binario descartar posibles overflow de variable INT en metodo 
+            //Numero.DecimalBinario(double numero)
+            btnConvertirABinario.Enabled = false;
             //Si el tamaño del string resultado en biniario es demasiado grande, se mostrara en un MessageBox
-            if (LabelResultado.Text.Length > 21)
+            if (lblResultado.Text.Length > 21)
             {
-                MessageBox.Show(LabelResultado.Text, "Resultado binario",MessageBoxButtons.OK);
+                MessageBox.Show(lblResultado.Text, "Resultado binario",MessageBoxButtons.OK);
 
             }
             //Si el contenido de lblresultado despues de convetir a binario no es numerico entonces quedaran inhabilitadas las opciones de convertir a binario
             //y convertir a decimal.
-            else if (!LabelResultado.Text.All(Char.IsNumber))
+            else if (!lblResultado.Text.All(Char.IsNumber))
             {
-                ButtonConvertirABinario.Enabled = false;
-                ButttonConvertirADecimal.Enabled = false;
+                btnConvertirABinario.Enabled = false;
+                btnConvertirADecimal.Enabled = false;
             }
         }
         /// <summary>
-        /// Si el metodo convertir a binario fue exitoso entonces estara habilitado para poder convertir de binario a decimal
+        /// Metodo click para convertir a decimal, siempre y cuando el convertir a binario haya sido exitoso.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ButtonConvertirADecimal_Click(object sender, EventArgs e)
         {
-            this.LabelResultado.Text = Numero.BinarioDecimal(LabelResultado.Text);
+            this.lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
+            //Se deshabilita el boton convertir a decimal ya que el numero mostrado en el lblresultado ya es un decimal.
+            btnConvertirADecimal.Enabled = false;
+            //Se habilita hacer la conversion a binario nuevamente.
+            btnConvertirABinario.Enabled = true;
         }
     }
 }

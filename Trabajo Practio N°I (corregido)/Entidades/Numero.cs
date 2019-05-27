@@ -12,28 +12,26 @@ namespace Entidades
         /// <summary>
         /// Constructor que asigna el valor de Numero en 0;
         /// </summary>
-        public Numero()
-        {
-            this.numero = 0;
-        }
+        public Numero() : this(0)
+        { }
         /// <summary>
-        /// Constructor que recibe un numero en formato string y se lo pasa a SetNumero para asingar el valor al atributo numero
+        /// Constructor que recibe un numero en formato string y se lo pasa a 
+        /// SetNumero para asingar el valor al atributo numero
         /// </summary>
         /// <param name="numero">Numero recibido en formato string para ser seteado en el atributo numero</param>
         public Numero(string numero)
         {
             SetNumero = numero;
-
         }
         /// <summary>
-        /// Constructor que recibe un numero en formato double y se lo pasa a SetNumero para asingar el valor al atributo numero
+        /// Constructor que recibe un numero en formato double y se lo pasa a 
+        /// SetNumero con previa conversion a string para asingar el valor al atributo numero
         /// </summary>
         /// <param name="numero"> Numero recibido en formato double para ser seteado en el atributo numero</param>
         public Numero(double numero) : this(Convert.ToString(numero))
-        {
-        }
+        {}
         /// <summary>
-        /// SetNumero setea el value al atributo numero.
+        /// Propiedad SetNumero setea el value al atributo numero.
         /// </summary>
         public string SetNumero
         {
@@ -43,14 +41,15 @@ namespace Entidades
             }
         }
         /// <summary>
-        ///  comprobará que el valor recibido sea numérico, y lo retornará en formato double. Caso contrario, retornará 0
+        /// Meotodo que comprobará que el valor recibido sea numérico, y lo retornará 
+        /// en formato double. Caso contrario, retornará 0
         /// </summary>
         /// <param name="strNumero">Numero recibido que hay que validar</param>
         /// <returns>numero validado</returns>
         private static double ValidarNumero(string strNumero)
         {
-            //Se inicializa el valor de numero en 0.0 y solo se cambiara si la conversion a Double fue correcta, caso
-            //contratio retornara 0;
+            //Se inicializa el valor de numero y solo se cambiara si la conversion a Double fue correcta, 
+            //caso contratio retornara double.MinValue;
             double numero = double.MinValue;
 
             if (!double.TryParse(strNumero, out numero))
@@ -59,7 +58,6 @@ namespace Entidades
             }
             return numero;
         }
-
         /// <summary>
         /// Metodo que recibe un string con un numeor binario y lo transforma a a un numero del tipo entero
         /// </summary>
@@ -101,16 +99,8 @@ namespace Entidades
         /// <returns>Numero convertido o valor invalido si la conversion falla</returns>
         public static string DecimalBinario(double numero)
         {
-            //Convierte el double en string para hacer el TryParse a int
-            string numerostr = Convert.ToInt32(numero).ToString();
-            int num = int.MinValue;
-            if (Int32.TryParse(numerostr, out num) && num > 0)
-            {
-                return Convert.ToString(num, 2);
-            }
-            return "Valor invalido";
+            return DecimalBinario(Convert.ToString(numero));
         }
-
         /// <summary>
         /// Recibe un numero decimal en formato string y lo convierte a binario
         /// </summary>
@@ -118,24 +108,13 @@ namespace Entidades
         /// <returns>Numero convertido o valor invalido si la conversion falla</returns>
         public static string DecimalBinario(string numero)
         {
-            try //Intento convertir de string a int, si el string es mas grande la capacidad de un Int, rebotara.
+            Int64 num = Convert.ToInt64(numero);
+            if (numero.All(Char.IsNumber) && num >= 0)
             {
-                Int64 num = Convert.ToInt64(numero);
-                if (numero.All(Char.IsNumber) && num >= 0)
-                {
-                    return Convert.ToString(num, 2);
-                }
+                return Convert.ToString(num, 2);
             }
-            catch (System.OverflowException) //Atrapo el caso de un overflow de la variable num.
-            {
-            }
-            catch (System.FormatException)
-            {
-            }
-           return "Valor invalido";
-
+            return "Valor invalido";
         }
-
         //SOBRECARGA DEL OPERADOR + PARA PODER PODER SUMAR DOS OBJETOS DEL TIPO NUMERO
         public static double operator +(Numero n1, Numero n2)
         {
