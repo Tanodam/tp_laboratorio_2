@@ -8,9 +8,8 @@ namespace Excepciones
 {
     public class ArchivosException : Exception
     {
-        public ArchivosException(Exception innerException)
+        public ArchivosException(Exception innerException) : base("Error al manipular el archivo",innerException)
         {
-            throw new NotImplementedException();
         }
     }
 }

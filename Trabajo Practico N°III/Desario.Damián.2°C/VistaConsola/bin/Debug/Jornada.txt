@@ -1,30 +1,271 @@
-Clase: Programacion
-Profesor: Nombre: Juan
-Apellido: Lopez
-DNI: 12234456
-Nacionalidad: Argentino
+JORNADA:
+CLASE DE Laboratorio POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Laboratorio
+Laboratorio
+
+ALUMNOS: 
+NOMBRE COMPLETO: Joaquin Suarez
+NACIONALIDAD: Extranjero
+
+Legajo: 7
+Clases que toma: Laboratorio
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Roberto Juarez
+NACIONALIDAD: Argentino
+
+Legajo: 2
+Clases del dia
+Programacion
+Laboratorio
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Legislacion POR NOMBRE COMPLETO: Roberto Juarez
+NACIONALIDAD: Argentino
+
+Legajo: 2
+Clases del dia
+Programacion
+Legislacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Miguel Hernandez
+NACIONALIDAD: Extranjero
+
+Legajo: 4
+Clases que toma: Legislacion
+Estado de Cuenta: AlDia
+NOMBRE COMPLETO: Rodrigo Smith
+NACIONALIDAD: Argentino
+
+Legajo: 8
+Clases que toma: Legislacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
 Legajo: 1
 Clases del dia
 Programacion
 Legislacion
 
-Alumnos: 
-Nombre: Juan
-Apellido: Lopez
-DNI: 12234456
-Nacionalidad: Argentino
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
 Legajo: 1
 Clases que toma: Programacion
-Estado de Cuenta: AlDiaNombre: José
-Apellido: Gutierrez
-DNI: 12234456
-Nacionalidad: Argentino
-Legajo: 3
-Clases que toma: Programacion
-Estado de Cuenta: AlDiaNombre: Carlos
-Apellido: Gonzalez
-DNI: 12236456
-Nacionalidad: Argentino
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
 Legajo: 5
 Clases que toma: Programacion
 Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Programacion
+Programacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Roberto Juarez
+NACIONALIDAD: Argentino
+
+Legajo: 2
+Clases del dia
+Programacion
+Legislacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Legislacion
+Programacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Programacion
+Programacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: José Gutierrez
+NACIONALIDAD: Argentino
+
+Legajo: 3
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Roberto Juarez
+NACIONALIDAD: Argentino
+
+Legajo: 2
+Clases del dia
+Programacion
+Laboratorio
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: José Gutierrez
+NACIONALIDAD: Argentino
+
+Legajo: 3
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Programacion
+Laboratorio
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: José Gutierrez
+NACIONALIDAD: Argentino
+
+Legajo: 3
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+
+JORNADA:
+CLASE DE Programacion POR NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases del dia
+Programacion
+Programacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Juan Lopez
+NACIONALIDAD: Argentino
+
+Legajo: 1
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: José Gutierrez
+NACIONALIDAD: Argentino
+
+Legajo: 3
+Clases que toma: Programacion
+Estado de Cuenta: Becado
+NOMBRE COMPLETO: Carlos Gonzalez
+NACIONALIDAD: Argentino
+
+Legajo: 5
+Clases que toma: Programacion
+Estado de Cuenta: AlDia
+

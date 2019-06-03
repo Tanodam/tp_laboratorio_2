@@ -52,7 +52,7 @@ namespace Clases_Instanciables
         /// <param name="estadoCuenta"></param>
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id,nombre,apellido,dni,nacionalidad,claseQueToma)
         {
-            this.claseQueToma = claseQueToma;
+            this.estadoCuenta = estadoCuenta;
         }
         /// <summary>
         /// Sobrecarga mostrarDatos

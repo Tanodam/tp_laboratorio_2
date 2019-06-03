@@ -47,22 +47,22 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         protected virtual string MostrarDatos()
         {
-            return String.Format("{0}\nLegajo: {1}", base.ToString(), this.legajo);
+            return String.Format("{0}\n\nLegajo: {1}", base.ToString(), this.legajo);
         }
         /// <summary>
-        /// Sobrecarga ==
+        /// Dos Universitario serán iguales si y sólo si son del mismo Tipo y su Legajo o DNI son iguales.
         /// </summary>
         /// <param name="universitarioUno"></param>
         /// <param name="universitarioDos"></param>
         /// <returns></returns>
         public static bool operator ==(Universitario universitarioUno, Universitario universitarioDos)
         {
-            if (universitarioUno.legajo == universitarioDos.legajo && universitarioUno.DNI == universitarioDos.DNI &&
-                universitarioUno.GetType() == universitarioDos.GetType())
+            if ((universitarioUno.legajo == universitarioDos.legajo) || (universitarioUno.DNI == universitarioDos.DNI) &&
+                (universitarioUno.Equals(universitarioDos) || universitarioDos.Equals(universitarioUno)))
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
         /// <summary>
         /// Sobrecarga  !=

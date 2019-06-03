@@ -32,12 +32,12 @@ namespace VistaConsola
             }
             try
             {
-                Alumno a3 = new Alumno(3, "José", "Gutierrez", "12234456",
+                Alumno a3 = new Alumno(3, "José", "Gutierrez", "12234458",
                EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion,
                Alumno.EEstadoCuenta.Becado);
                 gim += a3;
             }
-            catch (AlumnoRepetidoException e)
+            catch (NacionalidadInvalidaException e)
             {
                 Console.WriteLine(e.Message);
 

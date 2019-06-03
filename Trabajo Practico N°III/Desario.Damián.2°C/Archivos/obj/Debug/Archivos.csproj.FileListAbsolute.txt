@@ -7,3 +7,12 @@ C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Dami
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.csproj.CopyComplete
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.dll
 C:\Users\Dami\Documents\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.pdb
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\bin\Debug\Archivos.dll
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\bin\Debug\Archivos.pdb
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\bin\Debug\Excepciones.dll
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\bin\Debug\Excepciones.pdb
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.csproj.CopyComplete
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.dll
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\Archivos\obj\Debug\Archivos.pdb

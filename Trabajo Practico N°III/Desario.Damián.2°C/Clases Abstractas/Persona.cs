@@ -52,7 +52,18 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.dni = ValidarDni(Nacionalidad, value.ToString());
+                try
+                {
+                    this.dni = ValidarDni(Nacionalidad, value);
+                }
+                catch (NacionalidadInvalidaException)
+                {
+                    throw new NacionalidadInvalidaException();
+                }
+                catch (DniInvalidoException)
+                {
+                    throw new DniInvalidoException();
+                }
             }
         }
         /// <summary>
@@ -67,9 +78,18 @@ namespace EntidadesAbstractas
 
                     this.dni = ValidarDni(this.Nacionalidad, value);
                 }
-                catch
+                catch (NacionalidadInvalidaException)
                 {
                     throw new NacionalidadInvalidaException();
+                }
+                catch (DniInvalidoException)
+                {
+                    throw new DniInvalidoException();
+                }
+                ///Si el DNI no es un INT lanza excepcion DNI invalido
+                catch (FormatException)
+                {
+                    throw new DniInvalidoException();
                 }
             }
         }
@@ -152,8 +172,7 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         public override string ToString()
         {
-            return String.Format("Nombre: {0}\nApellido: {1}\nDNI: {2}\nNacionalidad: {3}",
-                                 this.Nombre, this.Apellido, this.DNI, this.Nacionalidad);
+            return String.Format("NOMBRE COMPLETO: {0}\nNACIONALIDAD: {1}", this.Nombre + " " + this.Apellido, this.Nacionalidad);
         }
         /// <summary>
         /// Validar DNI
@@ -184,6 +203,7 @@ namespace EntidadesAbstractas
                         throw new NacionalidadInvalidaException();
                     }
             }
+
             throw new DniInvalidoException();
         }
         /// <summary>

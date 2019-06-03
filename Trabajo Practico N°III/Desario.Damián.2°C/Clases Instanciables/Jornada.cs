@@ -90,7 +90,7 @@ namespace Clases_Instanciables
         /// Leer de clase retornará los datos de la Jornada como texto
         /// </summary>
         /// <returns></returns>
-        public string Leer()
+        public static string Leer()
         {
             string textoLeido;
             Texto texto = new Texto();
@@ -147,9 +147,8 @@ namespace Clases_Instanciables
         {
             StringBuilder datos = new StringBuilder();
 
-            datos.AppendLine("Clase: " + this.clase);
-            datos.AppendLine("Profesor: " + this.instructor.ToString());
-            datos.AppendLine("Alumnos: ");
+            datos.AppendFormat("JORNADA:\nCLASE DE {0} POR {1}", this.Clase, this.instructor.ToString());
+            datos.AppendLine("\nALUMNOS: ");
 
             foreach (Alumno alumnito in this.alumnos)
             {

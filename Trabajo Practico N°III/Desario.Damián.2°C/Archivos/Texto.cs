@@ -10,35 +10,37 @@ namespace Archivos
 {
     public class Texto : IArchivo<string>
     {
+        StreamWriter writer;
+        StreamReader reader;
         public bool Guardar(string archivo, string datos)
         {
-            StreamWriter writer = new StreamWriter(archivo,true);
             try
             {
+                writer = new StreamWriter(archivo, true);
                 writer.WriteLine(datos);
                 writer.Close();
                 return true;
             }
-            catch(ArchivosException exception)
+            catch (Exception exception)
             {
                 writer.Close();
-                throw exception.InnerException;
+                throw new ArchivosException(exception.InnerException);
             }
         }
 
         public bool Leer(string archivo, out string datos)
         {
-            StreamReader reader = new StreamReader(archivo, true);
             try
             {
+                reader = new StreamReader(archivo, Encoding.UTF8);
                 datos = reader.ReadToEnd();
                 reader.Close();
                 return true;
             }
-            catch (ArchivosException exception)
+            catch (Exception exception)
             {
                 reader.Close();
-                throw exception.InnerException;
+                throw new ArchivosException(exception.InnerException);
             }
         }
     }
