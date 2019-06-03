@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clases_Abstractas;
+using EntidadesAbstractas;
 
 namespace Clases_Instanciables
 {
@@ -60,7 +60,7 @@ namespace Clases_Instanciables
         /// <returns></returns>
         protected override string MostrarDatos()
         {
-            return String.Format("{0}\nClases que toma: {1}\nEstado de Cuenta: {2}",
+            return String.Format("{0}\nClases que toma: {1}\nEstado de Cuenta: {2}\n",
                                   base.MostrarDatos(), this.claseQueToma, this.estadoCuenta);
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Clases_Instanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            return String.Format("TOMA CLASE DE {0}", this.claseQueToma);
+            return String.Format("TOMA CLASE DE {0}\n", this.claseQueToma);
         }
         /// <summary>
         /// Sobrecarga ToString

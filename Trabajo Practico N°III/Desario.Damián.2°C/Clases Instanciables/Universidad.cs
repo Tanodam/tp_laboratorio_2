@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Excepciones; 
+using Excepciones;
+using Archivos;
 
 namespace Clases_Instanciables
 {
+    [Serializable]
     public class Universidad
     {
         #region Enumerado Clases
@@ -15,11 +17,13 @@ namespace Clases_Instanciables
             Programacion, Laboratorio, Legislacion, SPD
         }
         #endregion
+
         #region Atributos
         private List<Alumno> alumnos;
         private List<Profesor> profesores;
         private List<Jornada> jornada;
         #endregion
+
         #region Propiedades
         /// <summary>
         /// Constuctor lista alumnos
@@ -80,6 +84,7 @@ namespace Clases_Instanciables
             }
         }
         #endregion
+
         #region Metodos
         /// <summary>
         /// Constructor de instancia, inicializa todos l
@@ -91,20 +96,41 @@ namespace Clases_Instanciables
             this.Jornadas = new List<Jornada>();
         }
         /// <summary>
-        /// Metodo guardaar
+        /// Guardar de clase serializará los datos del Universidad en un XML, incluyendo todos los datos de sus Profesores,
+        /// Alumnos y Jornadas.
         /// </summary>
         /// <returns></returns>
-        public bool Guardar()
+        public static bool Guardar(Universidad universidad)
         {
-            return true;
+            Xml<Universidad> texto = new Xml<Universidad>();
+            return texto.Guardar("Universidad.xml", universidad);
+
         }
         /// <summary>
-        /// Metodo Mostrr Datos
+        /// Leer de clase retornará un Universidad con todos los datos previamente serializados. 
+        /// ESTE METODO NO FIGURA EN EL DIAGRAMA DE CLASES
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
+        public static Universidad Leer(Universidad datos)
+        {
+            Xml<Universidad> import = new Xml<Universidad>();
+            Universidad retorno;
+            import.Leer("Universidad.xml", out retorno);
+            return retorno;
+        }
+        /// <summary>
+        /// Metodo MostrarDatos privado y de clase.
         /// </summary>
         /// <returns></returns>
-        private string MostrarDatos()
+        private static string MostrarDatos(Universidad universidad)
         {
-            return "";
+            StringBuilder datos = new StringBuilder();
+            foreach (Jornada jornada in universidad.jornada)
+            {
+                datos.Append(jornada);
+            }
+            return datos.ToString();
         }
         /// <summary>
         /// Sobrecarga ==
@@ -161,7 +187,9 @@ namespace Clases_Instanciables
             return !(universidad == profesor);
         }
         /// <summary>
-        /// Sobrecarga ==
+        /// La igualación entre un Universidad y una Clase retornará el primer Profesor capaz de dar esa clase.
+        /// Sino, lanzará la Excepción SinProfesorException. El distinto retornará el primer Profesor que no pueda 
+        /// dar la clase.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="alumno"></param>
@@ -178,11 +206,11 @@ namespace Clases_Instanciables
                     }
                 }
             }
-
             throw new SinProfesorException();
         }
         /// <summary>
-        /// Sobrecarga ==
+        /// Universidad sera igual a la clase si hay un profesor disponible para dictar la clase, se utilizara el != entre
+        /// profesor y clase.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="alumno"></param>
@@ -199,42 +227,69 @@ namespace Clases_Instanciables
             return null;
         }
         /// <summary>
-        /// Sobrecarga +
+        /// Al agregar una clase a un Universidad se deberá generar y agregar una nueva Jornada indicando la clase, 
+        /// un Profesor que pueda darla (según su atributo ClasesDelDia) y la lista de alumnos que la toman 
+        /// (todos los que coincidan en su campo ClaseQueToma).
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="clase"></param>
         /// <returns></returns>
         public static Universidad operator +(Universidad universidad, EClases clase)
         {
+             Jornada jornadaNueva = new Jornada(clase, (universidad == clase));
+
+            foreach (Alumno alumno in universidad.alumnos)
+            {
+                if(alumno == clase)
+                {
+                    //Agrego alumnos a la jornada
+                    jornadaNueva.Alumnos.Add(alumno);
+                }
+            }
+            universidad.jornada.Add(jornadaNueva);
             return universidad;
         }
         /// <summary>
-        /// Sobrecarga +
+        ///Se agregarán Alumnos y Profesores mediante el operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="clase"></param>
         /// <returns></returns>
         public static Universidad operator +(Universidad universidad, Profesor profesor)
         {
+            if (universidad != profesor)
+            {
+                universidad.profesores.Add(profesor);
+            }
+
             return universidad;
         }
         /// <summary>
-        /// Sobrecarga +
+        /// Se agregarán Alumnos y Profesores mediante el operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="clase"></param>
         /// <returns></returns>
         public static Universidad operator +(Universidad universidad, Alumno alumno)
         {
+            if (universidad != alumno)
+            {
+                universidad.alumnos.Add(alumno);
+            }
+            else
+            {
+                throw new AlumnoRepetidoException();
+            }
+
             return universidad;
         }
         /// <summary>
-        /// Sobrecarga ToString
+        /// Sobrecarga ToString, publicara todos los datos de la universidad a traves del metodo MostrarDatos
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString();
+            return MostrarDatos(this);
         }
         #endregion
     }

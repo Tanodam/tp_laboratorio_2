@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clases_Abstractas
+namespace EntidadesAbstractas
 {
     public abstract class Universitario : Persona
     {
@@ -27,8 +27,10 @@ namespace Clases_Abstractas
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
-        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre,apellido,dni,nacionalidad)
+        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) 
+                      : base(nombre,apellido,dni,nacionalidad)
         {
+            this.legajo = legajo;
         }
         /// <summary>
         /// Sobrecarga Equals
@@ -55,8 +57,8 @@ namespace Clases_Abstractas
         /// <returns></returns>
         public static bool operator ==(Universitario universitarioUno, Universitario universitarioDos)
         {
-            if(universitarioUno.Equals(universitarioDos) || universitarioDos.Equals(universitarioUno) && universitarioUno.legajo == universitarioDos.legajo ||
-                universitarioUno.DNI == universitarioDos.DNI)
+            if (universitarioUno.legajo == universitarioDos.legajo && universitarioUno.DNI == universitarioDos.DNI &&
+                universitarioUno.GetType() == universitarioDos.GetType())
             {
                 return false;
             }

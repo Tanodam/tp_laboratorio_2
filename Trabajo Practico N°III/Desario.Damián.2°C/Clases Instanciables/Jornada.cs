@@ -81,7 +81,7 @@ namespace Clases_Instanciables
         /// </summary>
         /// <param name="jornada"></param>
         /// <returns></returns>
-        public bool Guardar(Jornada jornada)
+        public static bool Guardar(Jornada jornada)
         {
             Texto texto = new Texto();
             return texto.Guardar("Jornada.txt", jornada.ToString());

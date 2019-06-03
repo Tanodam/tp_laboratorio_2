@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clases_Abstractas;
+using EntidadesAbstractas;
 
 namespace Clases_Instanciables
 {
@@ -48,7 +48,7 @@ namespace Clases_Instanciables
         private void _randomClase()
         {
             this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
-            System.Threading.Thread.Sleep(4000);
+           // System.Threading.Thread.Sleep(4000);
             this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Clases_Instanciables
             return datos.ToString();
         }
         /// <summary>
-        /// Sobrecarga ==
+        /// Un profesor sera igual a una clase si el mismo dicta la clase.
         /// </summary>
         /// <param name="profesor"></param>
         /// <param name="clase"></param>

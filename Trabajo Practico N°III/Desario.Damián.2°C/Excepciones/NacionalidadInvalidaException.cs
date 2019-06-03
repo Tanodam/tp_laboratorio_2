@@ -8,13 +8,11 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException : Exception
     {
-        public NacionalidadInvalidaException()
+        public NacionalidadInvalidaException() : this("DNI no valido por la nacionalidad")
         {
-            throw new NotImplementedException();
         }
-        public NacionalidadInvalidaException(string message)
+        public NacionalidadInvalidaException(string message) : base(message)
         {
-            throw new NotImplementedException();
         }
     }
     

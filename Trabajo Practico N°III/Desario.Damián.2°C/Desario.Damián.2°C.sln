@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases Instanciables", "Cla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{CA0A2F39-BF28-4D23-92F5-A5E42E3CD50B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaConsola", "VistaConsola\VistaConsola.csproj", "{79014C65-CB1E-427D-8C5C-2DCC836DB40D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CA0A2F39-BF28-4D23-92F5-A5E42E3CD50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA0A2F39-BF28-4D23-92F5-A5E42E3CD50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA0A2F39-BF28-4D23-92F5-A5E42E3CD50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79014C65-CB1E-427D-8C5C-2DCC836DB40D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79014C65-CB1E-427D-8C5C-2DCC836DB40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79014C65-CB1E-427D-8C5C-2DCC836DB40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79014C65-CB1E-427D-8C5C-2DCC836DB40D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Excepciones;
 
 namespace Archivos
 {
@@ -10,12 +12,34 @@ namespace Archivos
     {
         public bool Guardar(string archivo, string datos)
         {
-            throw new NotImplementedException();
+            StreamWriter writer = new StreamWriter(archivo,true);
+            try
+            {
+                writer.WriteLine(datos);
+                writer.Close();
+                return true;
+            }
+            catch(ArchivosException exception)
+            {
+                writer.Close();
+                throw exception.InnerException;
+            }
         }
 
         public bool Leer(string archivo, out string datos)
         {
-            throw new NotImplementedException();
+            StreamReader reader = new StreamReader(archivo, true);
+            try
+            {
+                datos = reader.ReadToEnd();
+                reader.Close();
+                return true;
+            }
+            catch (ArchivosException exception)
+            {
+                reader.Close();
+                throw exception.InnerException;
+            }
         }
     }
 }
