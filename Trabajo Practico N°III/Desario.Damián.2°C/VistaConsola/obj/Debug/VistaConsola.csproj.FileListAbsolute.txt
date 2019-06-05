@@ -30,3 +30,19 @@ C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desari
 C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.csproj.CopyComplete
 C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.exe
 C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\VistaConsola.exe.config
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\VistaConsola.exe
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\VistaConsola.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Archivos.dll
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Clases Abstractas.dll
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Clases Instanciables.dll
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Excepciones.dll
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Archivos.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Clases Abstractas.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Clases Instanciables.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\bin\Debug\Excepciones.pdb
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.csprojAssemblyReference.cache
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.csproj.CoreCompileInputs.cache
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.csproj.CopyComplete
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.exe
+D:\Damian Desario\tp_laboratorio_2\Trabajo Practico N°III\Desario.Damián.2°C\VistaConsola\obj\Debug\VistaConsola.pdb
