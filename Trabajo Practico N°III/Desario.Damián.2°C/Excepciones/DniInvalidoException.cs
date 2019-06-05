@@ -11,13 +11,13 @@ namespace Excepciones
         /// <summary>
         /// Preguntar como usar mensajeBase
         /// </summary>
-        private string mensajeBase;
+        private static string mensajeBase = "DNI invalido";
 
-        public DniInvalidoException() : this("DNI invalido")
+        public DniInvalidoException() : this(mensajeBase)
         {
            
         }
-        public DniInvalidoException(Exception exception) :this("DNI invalido", exception)
+        public DniInvalidoException(Exception exception) :this(mensajeBase, exception)
         {
 
         }

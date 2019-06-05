@@ -172,7 +172,7 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         public override string ToString()
         {
-            return String.Format("NOMBRE COMPLETO: {0}\nNACIONALIDAD: {1}", this.Nombre + " " + this.Apellido, this.Nacionalidad);
+            return String.Format("NOMBRE COMPLETO: {0}\nNACIONALIDAD: {1}", this.Nombre + ", " + this.Apellido, this.Nacionalidad);
         }
         /// <summary>
         /// Validar DNI

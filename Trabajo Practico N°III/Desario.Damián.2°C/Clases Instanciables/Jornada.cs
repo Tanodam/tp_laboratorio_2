@@ -107,7 +107,7 @@ namespace Clases_Instanciables
         {
             foreach (Alumno alumnitos in jornada.alumnos)
             {
-                if (alumnitos == alumno)
+                if (alumnitos != jornada.clase)
                 {
                     return true;
                 }

@@ -47,9 +47,8 @@ namespace Clases_Instanciables
         /// </summary>
         private void _randomClase()
         {
-            this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
-           // System.Threading.Thread.Sleep(4000);
-            this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
         }
         /// <summary>
         /// Devuelve todos los datos del profesor

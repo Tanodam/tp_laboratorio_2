@@ -60,8 +60,8 @@ namespace Clases_Instanciables
         /// <returns></returns>
         protected override string MostrarDatos()
         {
-            return String.Format("{0}\nClases que toma: {1}\nEstado de Cuenta: {2}\n",
-                                  base.MostrarDatos(), this.claseQueToma, this.estadoCuenta);
+            return String.Format("\n{0}\n\nESTADO DE CUENTA: {1}\n{2}\n",
+                                  base.MostrarDatos(), this.estadoCuenta, this.ParticiparEnClase());
         }
         /// <summary>
         /// Sobrecarga Participar En Clase
@@ -69,7 +69,7 @@ namespace Clases_Instanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            return String.Format("TOMA CLASE DE {0}\n", this.claseQueToma);
+            return String.Format("TOMA CLASE DE {0}", this.claseQueToma);
         }
         /// <summary>
         /// Sobrecarga ToString

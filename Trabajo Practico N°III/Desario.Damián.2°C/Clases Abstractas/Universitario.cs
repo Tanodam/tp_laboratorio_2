@@ -47,7 +47,7 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         protected virtual string MostrarDatos()
         {
-            return String.Format("{0}\n\nLegajo: {1}", base.ToString(), this.legajo);
+            return String.Format("{0}\n\nLEGAJO NÚMERO: {1}", base.ToString(), this.legajo);
         }
         /// <summary>
         /// Dos Universitario serán iguales si y sólo si son del mismo Tipo y su Legajo o DNI son iguales.
