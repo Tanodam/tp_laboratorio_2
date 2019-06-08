@@ -73,7 +73,7 @@ namespace Clases_Instanciables
         /// <param name="instructor"></param>
         public Jornada(Universidad.EClases clase, Profesor instructor) : this()
         {
-            this.clase = clase;
+            //this.clase = clase;
             this.instructor = instructor;
         }
         /// <summary>

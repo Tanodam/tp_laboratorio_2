@@ -13,7 +13,8 @@ namespace Clases_Instanciables
         private Queue<Universidad.EClases> clasesDelDia;
         static Random random;
         #endregion
-        #region Propiedades
+        #region Meotodos
+   
         /// <summary>
         /// constructor profesor
         /// </summary>

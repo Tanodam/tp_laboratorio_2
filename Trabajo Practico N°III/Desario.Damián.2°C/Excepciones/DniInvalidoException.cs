@@ -8,9 +8,6 @@ namespace Excepciones
 {
     public class DniInvalidoException : Exception
     {
-        /// <summary>
-        /// Preguntar como usar mensajeBase
-        /// </summary>
         private static string mensajeBase = "DNI invalido";
 
         public DniInvalidoException() : this(mensajeBase)

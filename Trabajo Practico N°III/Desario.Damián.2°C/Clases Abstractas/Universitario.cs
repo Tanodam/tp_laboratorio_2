@@ -20,7 +20,8 @@ namespace EntidadesAbstractas
 
         }
         /// <summary>
-        /// Constructor
+        /// Constructor de instancia, recibe los datos de un Universitario y se los pasa a la base y ademas 
+        /// setea el legajo
         /// </summary>
         /// <param name="legajo"></param>
         /// <param name="nombre"></param>
@@ -33,7 +34,7 @@ namespace EntidadesAbstractas
             this.legajo = legajo;
         }
         /// <summary>
-        /// Sobrecarga Equals
+        /// Sobrecarga Equals, retorna true si el objeto es del tipo Universitario
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -42,7 +43,7 @@ namespace EntidadesAbstractas
             return (obj is Universitario);
         }
         /// <summary>
-        ///Metodo Mostrar Datos 
+        ///Metodo Mostrar, retorna los datos de la base y agrega el legajo del Universitario
         /// </summary>
         /// <returns></returns>
         protected virtual string MostrarDatos()
@@ -65,7 +66,7 @@ namespace EntidadesAbstractas
             return false;
         }
         /// <summary>
-        /// Sobrecarga  !=
+        /// Sobrecarga != entre universitarios
         /// </summary>
         /// <param name="universitarioUno"></param>
         /// <param name="universitarioDos"></param>
@@ -75,7 +76,7 @@ namespace EntidadesAbstractas
             return !(universitarioUno == universitarioDos);
         }
         /// <summary>
-        /// Metodo participar
+        /// Metodo participar abstracto
         /// </summary>
         /// <returns></returns>
         protected abstract string ParticiparEnClase();

@@ -21,15 +21,16 @@ namespace Archivos
             {
                 //Serializo
                 objetoSerializador.Serialize(writer, datos);
-                //Cierro conexion con el archivo
-                writer.Close();
                 return true;
             }
             catch(ArchivosException exception)
             {
-                writer.Close();
                 throw exception.InnerException;
-
+            }
+            finally
+            {
+                //Cierro conexion con el archivo
+                writer.Close();
             }
 
         }
@@ -44,16 +45,16 @@ namespace Archivos
             {
                 //Deserializo
                 datos = (T)objetoDeserializador.Deserialize(reader);
-                //Cierro conexion con el archivo
-                reader.Close();
                 return true;
             }
             catch (ArchivosException exception)
             {
-                reader.Close();
-                ///preguntar que pasa con el out en este caso.
                 throw exception.InnerException;
-
+            }
+            finally
+            {
+                //Cierro conexion con el archivo
+                reader.Close();
             }
         }
     }

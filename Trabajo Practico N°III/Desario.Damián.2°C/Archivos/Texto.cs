@@ -18,13 +18,16 @@ namespace Archivos
             {
                 writer = new StreamWriter(archivo, true);
                 writer.WriteLine(datos);
-                writer.Close();
                 return true;
             }
             catch (Exception exception)
             {
-                writer.Close();
                 throw new ArchivosException(exception.InnerException);
+            }
+            finally
+            {
+                //Cierro conexion con el archivo
+                writer.Close();
             }
         }
 
@@ -34,13 +37,16 @@ namespace Archivos
             {
                 reader = new StreamReader(archivo, Encoding.UTF8);
                 datos = reader.ReadToEnd();
-                reader.Close();
                 return true;
             }
             catch (Exception exception)
             {
-                reader.Close();
                 throw new ArchivosException(exception.InnerException);
+            }
+            finally
+            {
+                //Cierro conexion con el archivo
+                reader.Close();
             }
         }
     }

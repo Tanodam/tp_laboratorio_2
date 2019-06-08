@@ -36,9 +36,9 @@ namespace Clases_Instanciables
         /// <param name="dni"></param>
         /// <param name="nacionalidad"></param>
         /// <param name="claseQueToma"></param>
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) : base(id,nombre,apellido,dni, nacionalidad)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) : this(id,nombre,apellido,dni, nacionalidad,claseQueToma,EEstadoCuenta.Deudor)
         {
-            this.claseQueToma = claseQueToma;
+            
         }
         /// <summary>
         /// Constuctor Alumno utiliza constructor de la clase
@@ -50,9 +50,10 @@ namespace Clases_Instanciables
         /// <param name="nacionalidad"></param>
         /// <param name="claseQueToma"></param>
         /// <param name="estadoCuenta"></param>
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id,nombre,apellido,dni,nacionalidad,claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : base(id,nombre,apellido,dni,nacionalidad)
         {
             this.estadoCuenta = estadoCuenta;
+            this.claseQueToma = claseQueToma;
         }
         /// <summary>
         /// Sobrecarga mostrarDatos

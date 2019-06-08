@@ -188,8 +188,7 @@ namespace Clases_Instanciables
         }
         /// <summary>
         /// La igualación entre un Universidad y una Clase retornará el primer Profesor capaz de dar esa clase.
-        /// Sino, lanzará la Excepción SinProfesorException. El distinto retornará el primer Profesor que no pueda 
-        /// dar la clase.
+        /// Sino, lanzará la Excepción SinProfesorException.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="alumno"></param>
@@ -209,8 +208,8 @@ namespace Clases_Instanciables
             throw new SinProfesorException();
         }
         /// <summary>
-        /// Universidad sera igual a la clase si hay un profesor disponible para dictar la clase, se utilizara el != entre
-        /// profesor y clase.
+        ///  El distinto retornará el primer Profesor que no pueda 
+        /// dar la clase.
         /// </summary>
         /// <param name="universidad"></param>
         /// <param name="alumno"></param>

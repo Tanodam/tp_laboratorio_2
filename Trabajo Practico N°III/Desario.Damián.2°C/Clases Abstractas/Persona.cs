@@ -10,13 +10,15 @@ namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
+        #region Enumerdados Nacionalidad
         /// <summary>
         /// Enumerado de las nacionalidades
         /// </summary>
         public enum ENacionalidad
         {
             Argentino, Extranjero
-        }
+        };
+        #endregion
         #region Atributos
         private string apellido;
         private int dni;
@@ -133,7 +135,7 @@ namespace EntidadesAbstractas
         {
         }
         /// <summary>
-        /// Constructor Persona
+        /// Sobrecarga Constructor Persona
         /// </summary>
         /// <param name="nnombre"></param>
         /// <param name="apellido"></param>
@@ -145,7 +147,7 @@ namespace EntidadesAbstractas
             this.Nacionalidad = nacionalidad;
         }
         /// <summary>
-        /// Constructor Persona
+        /// Constructor Persona, recibe DNI como int
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
@@ -156,7 +158,7 @@ namespace EntidadesAbstractas
             this.DNI = dni;
         }
         /// <summary>
-        /// Constructor Persona
+        /// Constructor Persona, recibe DNI como string
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
@@ -167,7 +169,7 @@ namespace EntidadesAbstractas
             this.StringToDNI = dni;
         }
         /// <summary>
-        /// Sobrecarga To String
+        /// Sobreescritura ToString, muestra nombre, apellido y nacionalidad de la Persona
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -175,7 +177,7 @@ namespace EntidadesAbstractas
             return String.Format("NOMBRE COMPLETO: {0}\nNACIONALIDAD: {1}", this.Nombre + ", " + this.Apellido, this.Nacionalidad);
         }
         /// <summary>
-        /// Validar DNI
+        /// Metodo que valida DNI con la Nacionalidad.
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
@@ -207,7 +209,7 @@ namespace EntidadesAbstractas
             throw new DniInvalidoException();
         }
         /// <summary>
-        /// Validar DNI string
+        /// Validar que DNI recibido como string sea numerico, despues utiliza el validarDNI(int)
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
