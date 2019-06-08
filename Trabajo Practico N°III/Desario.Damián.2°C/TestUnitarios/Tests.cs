@@ -83,9 +83,6 @@ namespace TestUnitarios
             ///Validar Alumno
             Assert.IsNotNull(alumno.Apellido,"El APELLIDO de ALUMNO es null");
             Assert.IsNotNull(alumno.Nombre, "El NOMBRE de ALUMNO es null");
-            Assert.IsNotNull(alumno.Nacionalidad, "El APELLIDO de ALUMNO es null");
-            Assert.IsNotNull(alumno.Apellido, "El APELLIDO de ALUMNO es null");
-            Assert.IsNotNull(alumno.DNI, "El DNI de ALUMNO es null");
             ///Validar Jornada
             Assert.IsNotNull(jornada.Instructor, "El instructor en JORNADA es null");
             Assert.IsNotNull(jornada.Alumnos, "La lista de ALUMNOS en JORNADA es null");

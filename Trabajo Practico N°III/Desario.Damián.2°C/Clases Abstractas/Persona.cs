@@ -155,7 +155,7 @@ namespace EntidadesAbstractas
         /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
-            this.DNI = dni;
+           this.DNI = dni;
         }
         /// <summary>
         /// Constructor Persona, recibe DNI como string
@@ -166,7 +166,7 @@ namespace EntidadesAbstractas
         /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
-            this.StringToDNI = dni;
+           this.StringToDNI = dni;
         }
         /// <summary>
         /// Sobreescritura ToString, muestra nombre, apellido y nacionalidad de la Persona
