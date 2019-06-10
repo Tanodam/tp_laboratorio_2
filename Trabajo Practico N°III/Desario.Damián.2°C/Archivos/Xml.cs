@@ -23,9 +23,9 @@ namespace Archivos
                 objetoSerializador.Serialize(writer, datos);
                 return true;
             }
-            catch(ArchivosException exception)
+            catch(Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception.InnerException);
             }
             finally
             {
@@ -47,9 +47,9 @@ namespace Archivos
                 datos = (T)objetoDeserializador.Deserialize(reader);
                 return true;
             }
-            catch (ArchivosException exception)
+            catch (Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception.InnerException);
             }
             finally
             {
