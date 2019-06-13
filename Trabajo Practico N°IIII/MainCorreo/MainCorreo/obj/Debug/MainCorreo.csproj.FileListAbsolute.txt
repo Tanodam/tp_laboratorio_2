@@ -1,0 +1,10 @@
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.Form1.resources
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\soporte3\Desktop\UTN\TP\tp_laboratorio_2\Trabajo Practico N°IIII\MainCorreo\MainCorreo\obj\Debug\MainCorreo.pdb
