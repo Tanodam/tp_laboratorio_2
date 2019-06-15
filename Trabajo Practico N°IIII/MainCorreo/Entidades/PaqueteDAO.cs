@@ -29,7 +29,7 @@ namespace Entidades
                 throw e;
             }
         }
-        public static bool Guardar(Paquete paquete)
+        public static bool Insertar(Paquete paquete)
         {
             bool respuesta = false;
 

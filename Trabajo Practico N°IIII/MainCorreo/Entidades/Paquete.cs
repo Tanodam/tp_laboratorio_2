@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Entidades
 {
@@ -54,12 +55,29 @@ namespace Entidades
         #region Metodos
         public Paquete(string direccionEntrega, string trackingID)
         {
-            this.direccionEntrega = direccionEntrega;
-            this.trackingID = trackingID;
+            this.DireccionEntrega = direccionEntrega;
+            this.TrackingID = trackingID;
         }
+        /// <summary>
+        /// MockCicloDeVida hará que el paquete cambie de estado de la siguiente forma:
+        ///a.Colocar una demora de 4 segundos.
+        ///b.Pasar al siguiente estado.
+        ///c.Informar el estado a través de InformarEstado. EventArgs no tendrá ningún dato extra.
+        ///d.Repetir las acciones desde el punto A hasta que el estado sea Entregado.
+        ///e.Finalmente guardar los datos del paquete en la base de datos
+        /// </summary>
         public void MockCicloDeVida()
         {
-            throw new NotImplementedException(); /// TO DO
+            int contadorEstados = -1;
+            //this.Estado = EEstado.Ingresado;
+            do
+            {
+                Thread.Sleep(500);
+                contadorEstados = (int)this.Estado + 1;
+                this.Estado = (EEstado)contadorEstados;
+                this.InformaEstado(this, null);
+            } while ((int)this.Estado < 2);
+            PaqueteDAO.Insertar(this);
         }
 
         public static bool operator ==(Paquete paqueteUno, Paquete paqueteDos)
@@ -81,7 +99,7 @@ namespace Entidades
         #endregion
         #region Delegados / Eventos
 
-        public delegate void DelegadoEstado(object sender, EventArgs e);
+        public delegate void DelegadoEstado(object paquete, EventArgs e);
 
         public event DelegadoEstado InformaEstado;
 
