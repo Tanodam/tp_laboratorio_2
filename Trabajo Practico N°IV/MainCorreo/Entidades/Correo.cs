@@ -19,6 +19,10 @@ namespace Entidades
             {
                 return this.paquetes;
             }
+            set
+            {
+                this.paquetes = value;
+            }
         }
         #endregion
         #region Metodos

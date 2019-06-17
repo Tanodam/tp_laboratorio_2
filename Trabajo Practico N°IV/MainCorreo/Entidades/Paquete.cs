@@ -94,7 +94,7 @@ namespace Entidades
             {
                PaqueteDAO.Insertar(this);
             }
-            catch(System.Data.SqlClient.SqlException exception)
+            catch(Exception exception)
             {
                 //En caso de error de conexion a la base se lanza un nuevo evento que envie la excepcion al form.
                 this.InformaException(this, exception);
